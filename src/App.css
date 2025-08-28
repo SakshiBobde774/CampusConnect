@@ -1,0 +1,895 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+/* Header / Navbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2563eb; /* Blue background */
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d1d5db;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logout-btn {
+  background-color: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #eff6ff;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #1e293b; /* Dark blue-gray background */
+  /* You can add a background image like this: */
+  /* background-image: url('path/to/your/image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #9ca3af;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  color: #d1d5db;
+}
+
+.join-btn {
+  background-color: #db2777; /* Pink color */
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+  background-color: #be185d;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  margin-top: 5px; /* Pulls the cards up slightly over the hero section */
+  position: relative;
+  z-index: 10;
+}
+
+.feature-card {
+  background-color: #87a6dcd3; /* Pink background for cards */
+  color: rgb(5, 5, 5);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* === General Page & Card Styles === */
+.page-container {
+  padding: 2rem 5%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+.featured-banner {
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  margin-bottom: 2.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.6rem 1.5rem;
+  border-radius: 99px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.4rem;
+}
+
+.card-tagline {
+  color: #475569;
+  flex-grow: 1; /* Pushes footer down */
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-button, .card-button-secondary {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Pushes button to bottom */
+}
+
+.card-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+.card-button:hover {
+  background-color: #1d4ed8;
+}
+
+.card-button-secondary {
+  background-color: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.card-button-secondary:hover {
+  background-color: #eff6ff;
+}
+
+/* === Hackathons Page Specific Styles === */
+.hackathon-banner {
+  background-image: linear-gradient(rgba(20, 30, 50, 0.7), rgba(20, 30, 50, 0.7)), url('https://images.unsplash.com/photo-1556742502-ec7c0e2f34b1?w=500');
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+.status-upcoming { background-color: #2563eb; }/* === Hackathons Page Styles === */
+.hackathon-banner {
+  background-image: linear-gradient(rgba(20, 30, 50, 0.7), rgba(20, 30, 50, 0.7)), url('https://images.unsplash.com/photo-1556742502-ec7c0e2f34b1?w=500');
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+.status-upcoming { background-color: #2563eb; }
+.status-ongoing { background-color: #22c55e; }
+
+
+/* === Sports Page Specific Styles === */
+.sports-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500');
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sport-card {
+  height: 200px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sport-card:hover {
+  transform: scale(1.05);
+}
+
+.sport-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 2rem 1rem 1rem 1rem;
+  color: white;
+}
+
+.sport-card-overlay h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.event-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === Communities Page Specific Styles === */
+.community-banner {
+   background-image: linear-gradient(rgba(20, 30, 50, 0.6), rgba(20, 30, 50, 0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500');
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: #475569;
+}
+
+/* === Events Page Styles === */
+.event-banner {
+    background-image: linear-gradient(rgba(20, 30, 50, 0.6), rgba(20, 30, 50, 0.6)), url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500');
+}
+
+.events-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-list-item {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.event-list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-right: 1.5rem;
+    width: 65px;
+    height: 65px;
+}
+
+.event-date span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.event-date strong {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.event-details {
+    flex-grow: 1;
+}
+
+.event-details h3 {
+    margin: 0.2rem 0;
+    font-size: 1.3rem;
+    color: #1e293b;
+}
+
+.event-details p {
+    margin: 0;
+    color: #64748b;
+}
+
+.event-category-cultural { background-color: #fca5a5; color: #b91c1c; }
+.event-category-technical { background-color: #a5b4fc; color: #4338ca; }
+.event-category-arts { background-color: #fde68a; color: #a16207; }
+.event-category-seminar { background-color: #a7f3d0; color: #047857; }
+
+/* === Activities Page Styles === */
+.activity-banner {
+    background-image: linear-gradient(rgba(20, 30, 50, 0.6), rgba(20, 30, 50, 0.6)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=500');
+}
+.activity-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* === Contact Page Styles === */
+.contact-banner {
+    background-image: linear-gradient(rgba(20, 30, 50, 0.6), rgba(20, 30, 50, 0.6)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=500');
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.contact-form-container { padding: 2.5rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #dbeafe;
+}
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #334155;
+}
+.contact-info-list svg {
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+.map-container {
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* === About Page Styles === */
+.about-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.about-hero h1 {
+  font-size: 3rem;
+  color: #1e293b;
+}
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 1rem auto;
+}
+.about-section {
+  margin-top: 4rem;
+}
+.about-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .about-mission {
+    grid-template-columns: 1fr;
+  }
+}
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.feature-item {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+.feature-icon {
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.team-member-card {
+  text-align: center;
+}
+.team-member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.team-member-card h4 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+.team-member-card p {
+  margin: 0;
+  color: #64748b;
+}
+
+/* === Seminars Page Styles === */
+.seminar-banner {
+  background-image: linear-gradient(rgba(20, 30, 50, 0.6), rgba(20, 30, 50, 0.6)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500');
+}
+.seminar-list {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.seminar-item {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .seminar-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .seminar-action {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.seminar-details h3 { font-size: 1.4rem; }
+.seminar-details p { margin: 0.3rem 0; color: #475569; }
+
+/* === Footer Styles === */
+.footer {
+  background-color: #1e293b; /* Dark Blue-Gray */
+  color: #cbd5e1; /* Light Gray Text */
+  padding: 3rem 5% 0 5%;
+  margin-top: 4rem; /* Add space above the footer */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background-color: #2563eb; /* Blue Accent */
+}
+
+.footer-column p {
+  line-height: 1.7;
+  color: #94a3b8; /* Lighter Gray */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #cbd5e1;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2563eb;
+  transform: translateY(-3px);
+}
+
+.footer-links, .footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  border: 1px solid #475569;
+  background: #334155;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Search bar active effect */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #fff;
+  margin-bottom: 18px; /* Yeh bhi kaam karega */
+}
+.search-bar.active {
+  border: 1.5px solid #1976d2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  font-size: 1rem;
+  background: transparent;
+  width: 180px;
+}
+
+.overview-dashboard {
+  font-family: 'Arial', sans-serif;
+}
+
+.overview-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 22px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 10px;
+}
+
+/* Timeline Styles */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.timeline-item:hover {
+  background-color: #eef5ff;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #333;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #1877f2;
+}
+
+/* Updates Feed Styles */
+.update-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+.update-tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.sports-tag { background-color: #28a745; }
+.hackathon-tag { background-color: #007bff; }
+.community-tag { background-color: #fd7e14; }
+
+.update-item p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.update-time {
+  font-size: 12px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+/* Explore Grid Styles */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.explore-card {
+  background-color: #f0f8ff;
+  border: 1px solid #d1e7fd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #0c5460;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explore-card h3 {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
