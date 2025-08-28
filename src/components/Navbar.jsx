@@ -33,8 +33,8 @@ const Header = () => {
         <NavLink to="/contact" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Contact</NavLink>
       </nav>
       <div className="user-actions">
-        <a href="#" className="profile-link">Profile</a>
-        <button className="logout-btn">Logout</button>
+        <a href="/profile" className="profile-link">Profile</a>
+        <a href="/signup" className="SignUp-link">SignUp</a>
       </div>
     </header>
   );

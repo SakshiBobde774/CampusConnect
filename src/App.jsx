@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Profile from "./components/Profile";
+import { CssBaseline, Container } from "@mui/material";
 
 // Pages
 import HomePage from './pages/HomePage.jsx';
@@ -21,20 +25,24 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <CssBaseline />
       <div className="App">
         <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/overview" element={<OverviewPage />} />
-            <Route path="/hackathons" element={<Hackathons/>} />
+            <Route path="/hackathons" element={<Hackathons />} />
             <Route path="/sports" element={<Sports />} />
             <Route path="/communities" element={<Communities />} />
-            <Route path="/events" element={<Events/>} />
+            <Route path="/events" element={<Events />} />
             <Route path="/seminars" element={<Seminars />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
         <Footer />
