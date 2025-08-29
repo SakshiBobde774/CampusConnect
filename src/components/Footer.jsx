@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Lakshmi Narain College of Technology Bhopal</h4>
           <p>Official Student Portal for all academic and co-curricular activities.</p>
-          <p style={{ marginTop: '1rem', color: '#94a3b8' }}>123 University Road, Indore, MP, India</p>
+          <p style={{ marginTop: '1rem', color: '#94a3b8' }}>Raisen Road, Bhopal, MP, India</p>
         </div>
 
         <div className="footer-column">

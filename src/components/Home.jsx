@@ -4,11 +4,9 @@ const Home = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <p className="hero-subtitle">HELLO STUDENTS</p>
+        <h2 className="hero-subtitle"><b>HELLO STUDENTS</b></h2>
         <h1 className="hero-title">Welcome to the LNCT Student Portal</h1>
-        <p className="hero-description">
-          Your official source for all academic announcements, event registrations, club activities, and notices
-        </p>
+        <p className="hero-description"><b>Your official source for all academic announcements, event registrations, club activities, and notices</b></p>
         <Link to="/overview">
           <button className="join-btn">Overview</button>
         </Link>

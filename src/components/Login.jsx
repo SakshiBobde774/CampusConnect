@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { TextField, Button, Typography, Box, Link } from "@mui/material";
+import { TextField, Button, Typography, Box, Container, Link } from "@mui/material";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom"; // Import Link as RouterLink
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -23,17 +23,61 @@ export default function Login() {
   };
 
   return (
-    <Box mt={8}>
-      <Typography variant="h4" align="center" gutterBottom>Login</Typography>
-      <form onSubmit={handleLogin}>
-        <TextField label="Email" fullWidth margin="normal" value={email} onChange={e => setEmail(e.target.value)} required />
-        <TextField label="Password" type="password" fullWidth margin="normal" value={password} onChange={e => setPassword(e.target.value)} required />
-        {error && <Typography color="error">{error}</Typography>}
-        <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>Login</Button>
-      </form>
-      <Typography align="center" sx={{ mt: 2 }}>
-        Don't have an account? <Link href="/signup">Sign up</Link>
-      </Typography>
-    </Box>
+    // Container centers the content horizontally and sets a max-width
+    <Container component="main" maxWidth="xs">
+      <Box
+        sx={{
+          marginTop: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center', // Centers children horizontally
+        }}
+      >
+        <Typography component="h1" variant="h4">
+          Login
+        </Typography>
+        <Box component="form" onSubmit={handleLogin} sx={{ mt: 3, width: '100%' }}>
+          <TextField
+            label="Email"
+            fullWidth
+            margin="normal"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+            autoFocus // Good for usability on a login form
+          />
+          <TextField
+            label="Password"
+            type="password"
+            fullWidth
+            margin="normal"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            required
+          />
+          {error && (
+            <Typography color="error" align="center" sx={{ mt: 1 }}>
+              {error}
+            </Typography>
+          )}
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Login
+          </Button>
+          <Typography align="center">
+            Don't have an account?{" "}
+            {/* Use RouterLink for SPA navigation without a page refresh */}
+            <Link component={RouterLink} to="/signup" variant="body2">
+              Sign up
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
+    </Container>
   );
 }

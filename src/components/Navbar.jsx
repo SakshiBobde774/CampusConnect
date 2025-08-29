@@ -1,40 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+//import './Header.css'; // Step 1: Import the CSS file
 
 const Header = () => {
-  const navLinkStyle = {
-    color: 'white',
-    textDecoration: 'none',
-    margin: '0 0.8rem', // Thoda space adjust kiya
-    fontWeight: 500,
-    padding: '0.5rem 0',
-    borderBottom: '2px solid transparent',
-    transition: 'border-color 0.3s'
-  };
+  // State to manage whether the mobile menu is open or closed
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const activeLinkStyle = {
-    borderColor: 'white'
+  // Function to close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
 
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/" style={{...navLinkStyle, border: 'none', fontSize: '1.5rem'}}>CampusConnect</Link>
+        <Link to="/" className="logo-link" onClick={handleLinkClick}>
+          CampusConnect
+        </Link>
       </div>
-      <nav className="nav-links">
-        <NavLink to="/" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Home</NavLink>
-        <NavLink to="/hackathons" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Hackathons</NavLink>
-        <NavLink to="/sports" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Sports</NavLink>
-        <NavLink to="/communities" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Communities</NavLink>
-        <NavLink to="/events" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Events</NavLink>
-        <NavLink to="/seminars" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Seminars</NavLink>
-        <NavLink to="/activities" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Activities</NavLink>
-        <NavLink to="/about" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>About</NavLink>
-        <NavLink to="/contact" style={({isActive}) => isActive ? {...navLinkStyle, ...activeLinkStyle} : navLinkStyle}>Contact</NavLink>
-      </nav>
-      <div className="user-actions">
-        <a href="/profile" className="profile-link">Profile</a>
-        <a href="/signup" className="SignUp-link">SignUp</a>
+
+      {/* Hamburger menu icon - only visible on mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+      {/* Navigation menu - class changes based on 'menuOpen' state */}
+      <div className={menuOpen ? "nav-menu active" : "nav-menu"}>
+        <nav className="nav-links">
+          <NavLink to="/" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Home</NavLink>
+          <NavLink to="/hackathons" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Hackathons</NavLink>
+          <NavLink to="/sports" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Sports</NavLink>
+          <NavLink to="/communities" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Communities</NavLink>
+          <NavLink to="/events" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Events</NavLink>
+          <NavLink to="/seminars" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Seminars</NavLink>
+          <NavLink to="/activities" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Activities</NavLink>
+          <NavLink to="/about" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>About</NavLink>
+          <NavLink to="/contact" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={handleLinkClick}>Contact</NavLink>
+        </nav>
+
+        <div className="user-actions">
+           {/* Use Link component for better SPA navigation */}
+          <Link to="/profile" className="action-link profile-link" onClick={handleLinkClick}>Profile</Link>
+          <Link to="/signup" className="action-link signup-link" onClick={handleLinkClick}>SignUp</Link>
+        </div>
       </div>
     </header>
   );
