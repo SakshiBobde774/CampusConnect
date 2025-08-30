@@ -14,7 +14,6 @@ CampusConnect is packed with features designed to create a vibrant and informed 
 * **Event Calendar & Management:** Create, view, and RSVP to campus events like workshops, seminars, and fests. Includes event details, date, time, and location.
 * **Hackathon & Competition Portal:** A dedicated section listing all upcoming hackathons and competitions with details and registration links.
 * **Clubs & Groups:** Discover and join various campus clubs. Each group has its own page for announcements and discussions.
-* **Resource Sharing:** A hub for students to upload and download academic resources like notes, past papers, and study guides.
 
 ### 🤝 Community & Engagement
 * **Create & Share Posts:** Users can share updates, ask questions, or post information with support for text and images.
