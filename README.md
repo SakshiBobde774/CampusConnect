@@ -69,7 +69,8 @@ In the /backend directory:
 
 node index.js
 
-# In the root CampusConnect directory:
-The command for Vite is 'npm run dev'
+# Terminal 2: Run the Frontend Server
+In the root CampusConnect directory:
 
+The command for Vite is 'npm run dev'
 npm run dev
