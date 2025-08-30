@@ -38,3 +38,24 @@ To get a local copy up and running, follow these simple steps, which are tailore
 * Git
 * MongoDB (a local instance or a cloud service like MongoDB Atlas)
 
+# Navigate into the backend directory
+cd backend
+
+# Install dependencies
+npm install
+
+# Make sure you are in the root CampusConnect directory
+cd /path/to/your/CampusConnect
+
+# Install dependencies
+npm install
+
+# Terminal 1: Run the Backend Server
+In the /backend directory:
+
+node index.js
+
+# In the root CampusConnect directory:
+The command for Vite is 'npm run dev'
+
+npm run dev
